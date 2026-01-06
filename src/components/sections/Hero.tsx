@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Download, Linkedin, Github } from "lucide-react";
+import profilePhoto from "@/assets/profile-photo.png";
 
 const technologies = [
   { name: "React", Icon: Code2, color: "#61DAFB", experience: "3+ years", description: "Building dynamic SPAs and component libraries" },
@@ -80,9 +81,11 @@ const Hero = () => {
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className="absolute inset-0 m-auto w-32 h-32 md:w-44 md:h-44 rounded-full overflow-hidden ring-4 ring-primary/30 glow-effect z-20"
             >
-              <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                <span className="text-4xl md:text-5xl font-bold gradient-text">HM</span>
-              </div>
+              <img 
+                src={profilePhoto} 
+                alt="Habiba Mohamed" 
+                className="w-full h-full object-cover object-top"
+              />
             </motion.div>
 
             {/* Orbit Ring */}
